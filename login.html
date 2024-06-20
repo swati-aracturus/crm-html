@@ -95,11 +95,11 @@
                                 style="display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                                 <select
                                     class="h-10 rounded-md px-3 py-2 border text-sm text-violet-600 focus:outline-none bg-white"
-                                   style="margin: 0; border: none; box-shadow: none;" >   <!-- onchange="handleIsdc(event)" -->
-                                    <option value="" selected="selected">Select Country Code</option>
+                                   style="margin: 0; border: none; box-shadow: none;" id="countryCode" >   <!-- onchange="handleIsdc(event)" -->
+                                    <!-- <option value="" selected="selected">Select Country Code</option>
                                     <option value="+1">+1 USA</option>
                                     <option value="+91">+91 India</option>
-                                    <option value="+44">+44 UK</option>
+                                    <option value="+44">+44 UK</option> -->
                                 </select>
                                 <input type="text" required
                                     class="h-10 rounded-md px-3 py-2 border text-sm text-violet-600 focus:outline-none"
@@ -109,20 +109,21 @@
                             <label class="text-slate-500 pt-2" style="margin-bottom: 10px; margin-top: 11px;"> Country </label>
                             <select
                                 class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
-                                style="margin: 0; border: 1px solid #D5D5D5;" > <!--  onchange="handleContact(event)" -->
-                                <option value="" selected="selected">Select Country</option>
+                                style="margin: 0; border: 1px solid #D5D5D5;" id="countrySelect" > <!--  onchange="handleContact(event)" -->
+                                <!-- <option value="" selected="selected">Select Country</option>
                                 <option value="USA">USA</option>
                                 <option value="India">India</option>
-                                <option value="UK">UK</option>
+                                <option value="UK">UK</option> -->
                             </select>
                             <label class="text-slate-500 pt-2" style="margin-bottom: 10px; margin-top: 11px;"> Business </label>
                             <select
                                 class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
-                                style="margin: 0; border: 1px solid #D5D5D5;" > <!-- onchange="handleBusiness(event)" -->
-                                <option value="" selected="selected">Select Business</option>
+                                style="margin: 0; border: 1px solid #D5D5D5;" id="businessSelect"> <!-- onchange="handleBusiness(event)" -->
+                                
+                                <!-- <option value="" selected="selected">Select Business</option>
                                 <option value="Software">Software</option>
                                 <option value="Retail">Retail</option>
-                                <option value="Manufacturing">Manufacturing</option>
+                                <option value="Manufacturing">Manufacturing</option> -->
                             </select>
                             <button type="submit" class="h-11 font-medium bg-cyan-400 hover:bg-cyan-500 text-gray-100 text-lg rounded-md">Submit</button>
                 <div class="relative text-center py-4">
@@ -275,19 +276,28 @@
 <script>
     // Function to generate options for a select element
     function populateSelectOptions(selectElement, options) {
-        options.forEach(option => {
-            let optionElement = document.createElement('option');
-            optionElement.value = option.value;
-            optionElement.textContent = option.text;
-            selectElement.appendChild(optionElement);
-        });
-    }
+            if (!selectElement) {
+                console.error('Select element is null.');
+                return;
+            }
+            options.forEach(option => {
+                let optionElement = document.createElement('option');
+                optionElement.value = option.value;
+                optionElement.textContent = option.text;
+                selectElement.appendChild(optionElement);
+                console.log('Appended option:', optionElement);
+            });
+        }
 
     // Function to populate the country code select element
     function populateCountryCodeSelect() {
         const countryCodeSelect = document.getElementById('countryCode');
+        if (!countryCodeSelect) {
+                console.error('Element with ID countryCode not found.');
+                return;
+            }
         const countryCodes = [
-        { value: "+93", label: " +93 " },
+    { value: "+93", label: " +93 " },
   { value: "+355", label: " +355 " },
   { value: "+213", label: " +213 " },
   { value: "+1-684", label: " +1-684 " },
@@ -535,6 +545,10 @@
     // Function to populate the country select element
     function populateCountrySelect() {
         const countrySelect = document.getElementById('countrySelect');
+        if (!countrySelect) {
+                console.error('Element with ID countrySelect not found.');
+                return;
+        }
         const countries = [
         { value: "Afghanistan", label: "Afghanistan" },
   { value: "Albania", label: "Albania" },
@@ -746,6 +760,10 @@
     // Function to populate the business type select element
     function populateBusinessSelect() {
         const businessSelect = document.getElementById('businessSelect');
+        if (!businessSelect) {
+                console.error('Element with ID businessSelect not found.');
+                return;
+            }
         const businesses = [
             { value: 'retail', text: 'Retail' },
             { value: 'manufacturing', text: 'Manufacturing' },
@@ -766,11 +784,12 @@
     populateCountrySelect();
     populateBusinessSelect();
 
-    // Function to validate the form
-    function validateForm() {
-        // Your validation logic goes here
-        console.log('Form validation called');
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded and parsed');
+            populateCountryCodeSelect();
+            populateCountrySelect();
+            populateBusinessSelect();
+        });
 </script>
 </body>
 
