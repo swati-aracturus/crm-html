@@ -56,24 +56,26 @@
             Enter the one-time password sent to your Email ID.
           </div>
           <div class="mx-auto">
-             <form  class="grid space-y-6"> <!-- onClick={(e) => e.preventDefault()} -->
+             <form  class="grid space-y-6" id="myForm"> 
               <div class="flex justify-end py-2">
                 <div class="text-right text-cyan-600 no-underline">
                   <Link href="/change"> Change</Link>
                 </div>
               </div>
               <input
-                type="otp"
+                type="otp" 
                 required
                 class="h-10 rounded-md px-3  border text-xs focus:outline-none"
                 style="margin: 0; border: '1px solid #D5D5D5'"
                 placeholder="XXX XXX"
                 maxLength={6}
-              /><!-- onChange={(e) => handleot(e)} -->
+                id="otp"
+              />
               <div class="flex justify-between m-0 pb-12">
                 <div
-                  class="text-left text-slate-950 cursor: pointer;"
-                ><!-- onClick={() => sendotp(route?.query?.name)} -->
+                  class="text-left text-slate-950 cursor-pointer "
+                  id="resendButton" 
+                  >
                 
                   Resend
                 </div>
@@ -88,17 +90,82 @@
 
               <button
                 class="h-11 w-full font-medium bg-cyan-400 hover:bg-cyan-500 text-gray-100 text-base rounded-md"
-              >   <!-- onClick={() => otpEvent()} -->
+                type="submit" >   
               
                 Verify
               </button>
               <div class="text-center text-sm pb-12 font-medium text-gray-600">
-                {/*    OTP Sent Successfully
-                 */}
+               
               </div>
             </form>
           </div>
         </div>
       </div>
+
+
+      <script>
+
+        document.getElementById('myForm').addEventListener('submit', function (event){
+          event.preventDefault();
+
+          const formValues = {
+            emailid: "vogoh58286@nolanzip.com",
+           otp:  document.getElementById('otp').value        
+           };
+
+          console.log('Form Values:', formValues);
+          
+          fetch('https://stratagem.igniculuss.com/api/Users/verify/otp', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formValues)
+          })
+          .then(response => response.json())
+          .then(data => {
+              console.log('Success:', data);
+              if(data.status == 200) {
+              alert(data.message)
+              }else 
+              alert("Please write valid OTP")
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+          });
+        });
+
+      document.getElementById("resendButton").addEventListener("click", function(event) {
+        event.preventDefault();
+        console.log("Resend button clicked");
+
+    // URL of the API endpoint
+    const apiUrl = "https://stratagem.igniculuss.com/api/Users/send/otp";
+    const email = 'vogoh58286@nolanzip.com'
+    // const email = document.getElementById("email").value;
+
+
+    // Options for the fetch request
+    const options = {
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json" 
+        },
+        body: JSON.stringify({
+            email: email
+        })
+    };
+
+    // Make the API call
+    fetch(apiUrl, options)
+        .then(response => response.json())
+        .then(data => {
+            console.log("Success:", data);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+});
+      </script>
 </body>
 </html>

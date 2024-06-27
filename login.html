@@ -59,72 +59,54 @@
                     </a>
 
                     <div class="mx-auto">
-                        <form class="grid space-y-6">
+                        <form class="grid space-y-6" id="myForm">
                             <label class="text-slate-500 pb-2">First Name</label>
-                            <input type="fname" required
-                                class="h-10 rounded-md px-3 py-6 border text-sm focus:outline-none text-violet-600"
-                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="First Name"
-                                >  <!-- onchange="handleFname(event)" -->
+                            <input type="text" id="fnameInput" required class="h-10 rounded-md px-3 py-6 border text-sm focus:outline-none text-violet-600"
+                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="First Name">
+
                             <label class="text-slate-500 pb-2">Last Name</label>
-                            <input type="sname" required
-                                class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
-                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Last Name"
-                                > <!-- onchange="handleLname(event)" -->
+                            <input type="text" id="snameInput" required class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
+                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Last Name">
+
                             <label class="text-slate-500 pb-2">Email</label>
-                            <input type="email" required
-                                class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
-                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="123@gmail.com"
-                                > <!-- onchange="handleEmail(event)" -->
+                            <input type="email" id="emailInput" required class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
+                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="123@gmail.com">
+
                             <label class="text-slate-500 pb-2">Password</label>
-                            <input type="password" required
-                                class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
-                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="password"
-                                > <!-- onchange="handlePassword(event)" -->
-                            <label class="text-slate-500 pb-2">Company Name</label>
-                            <input type="text" required
-                                class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
-                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Company Name"
-                                > <!-- onchange="handleCompany(event)" -->
-                            <label class="text-slate-500 pb-2">Company Domain</label>
-                            <input type="text" required
-                                class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
-                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Company Domain"
-                                > <!-- onchange="handleCountrydomain(event)" -->
-                            <label class="text-slate-500 pt-2" style="margin-bottom: -15px; margin-top: 11px;"> Contact Number </label>
-                            <div
-                                style="display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                <select
-                                    class="h-10 rounded-md px-3 py-2 border text-sm text-violet-600 focus:outline-none bg-white"
-                                   style="margin: 0; border: none; box-shadow: none;" id="countryCode" >   <!-- onchange="handleIsdc(event)" -->
-                                    <!-- <option value="" selected="selected">Select Country Code</option>
-                                    <option value="+1">+1 USA</option>
-                                    <option value="+91">+91 India</option>
-                                    <option value="+44">+44 UK</option> -->
-                                </select>
-                                <input type="text" required
-                                    class="h-10 rounded-md px-3 py-2 border text-sm text-violet-600 focus:outline-none"
-                                    style="margin: 0; border: none; box-shadow: none;" placeholder="Phone Number"
-                                   > <!--  onchange="handleContact(event)" -->
-                            </div>
-                            <label class="text-slate-500 pt-2" style="margin-bottom: 10px; margin-top: 11px;"> Country </label>
-                            <select
-                                class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
-                                style="margin: 0; border: 1px solid #D5D5D5;" id="countrySelect" > <!--  onchange="handleContact(event)" -->
-                                <!-- <option value="" selected="selected">Select Country</option>
-                                <option value="USA">USA</option>
-                                <option value="India">India</option>
-                                <option value="UK">UK</option> -->
-                            </select>
-                            <label class="text-slate-500 pt-2" style="margin-bottom: 10px; margin-top: 11px;"> Business </label>
-                            <select
-                                class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
-                                style="margin: 0; border: 1px solid #D5D5D5;" id="businessSelect"> <!-- onchange="handleBusiness(event)" -->
+                            <input type="password" id="passwordInput" required class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
+                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="password">
                                 
-                                <!-- <option value="" selected="selected">Select Business</option>
-                                <option value="Software">Software</option>
-                                <option value="Retail">Retail</option>
-                                <option value="Manufacturing">Manufacturing</option> -->
+                            <label class="text-slate-500 pb-2">Role</label>
+                            <input type="text" id="roleInput" required class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
+                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Role">    
+
+                            <label class="text-slate-500 pb-2">Company Name</label>
+                            <input type="text" id="companyInput" required class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
+                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Company Name">
+
+                            <label class="text-slate-500 pb-2">Company Domain</label>
+                            <input type="text" id="domainInput" required class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
+                                style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Company Domain">
+
+                            <label class="text-slate-500 pt-2" style="margin-bottom: -15px; margin-top: 11px;"> Contact Number </label>
+                            <div style="display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); ">
+                                <select class="h-10 rounded-md px-3 py-2 border text-sm text-violet-600 focus:outline-none bg-white"
+                                    style="margin: 0; border: none; box-shadow: none;" id="countryCodeSelect">
+                                </select>
+                                <input type="text" id="phoneInput" required class="h-10 rounded-md px-3 py-2 border text-sm text-violet-600 focus:outline-none"
+                                    style="margin: 0; border: none; box-shadow: none;" placeholder="Phone Number">
+                            </div>
+
+                            <label class="text-slate-500 pt-2" style="margin-bottom: 10px; margin-top: 11px;" id="countryInput"> Country </label>
+                            <select class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
+                                style="margin: 0; border: 1px solid #D5D5D5;" id="countrySelect">
                             </select>
+
+                            <label class="text-slate-500 pt-2" style="margin-bottom: 10px; margin-top: 11px;" id="businessInput"> Business </label>
+                            <select class="h-10 rounded-md px-3 py-6 border text-sm text-violet-600 focus:outline-none"
+                                style="margin: 0; border: 1px solid #D5D5D5;" id="businessSelect">
+                            </select>
+
                             <button type="submit" class="h-11 font-medium bg-cyan-400 hover:bg-cyan-500 text-gray-100 text-lg rounded-md">Submit</button>
                 <div class="relative text-center py-4">
                     <div class="absolute inset-0 flex items-center">
@@ -151,153 +133,36 @@
             </div>
         </div>
     </div>
-
-    <!-- Mobile View -->
-    <!-- <div class="desktop: hidden lg:justify-center lg:items-center min-h-screen">
-        <div class="lg:flex lg:justify-center lg:items-center lg:w-full">
-            <div class="lg:w-2/3 lg:flex lg:justify-center lg:items-center">
-                <div
-                    class="rounded-lg lg:bg-white lg:w-2/3 lg:p-8 lg:mx-auto sm:mx-8 md:mx-auto sm:mt-12 lg:mt-12 md:mt-12 xs:mt-12">
-                    <div class="lg:flex lg:justify-center lg:items-center">
-                        <img src="/image2.svg" alt="My SVG" width="100" height="100" class="lg:pt-2">
-                    </div>
-                    <div class="lg:flex lg:justify-center">
-                        <img src="/image2.png" width="500" height="250">
-                    </div>
-                    <div class="lg:flex lg:justify-center lg:items-center">
-                        <svg width="36" height="46" viewBox="0 0 36 46" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0 23C9.94113 23 18 12.7025 18 0C18 12.7025 26.0589 23 36 23C26.0589 23 18 33.2975 18 46C18 33.2975 9.94113 23 0 23Z"
-                                fill="#02A7CC"></path>
-                        </svg>
-                        <div class="lg:font-extrabold lg:text-slate-900 lg:text-4xl lg:ml-2">Hello, Igniculuss</div>
-                        <img src="/hand.png" width="70" class="lg:ml-2">
-                    </div>
-                    <div class="lg:flex lg:justify-center">
-                        <div
-                            class="lg:text-center lg:text-base lg:leading-6 lg:w-4/5 lg:pb-4 lg:text-slate-500">Skip repetitive and manual
-                            sales-marketing tasks. Get highly productive through automation and save tons of time!
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lg:flex lg:items-center lg:justify-center lg:py-6 lg:my-0 lg:bg-white">
-            <div class="lg:w-2/3 lg:max-w-container lg:mx-auto">
-                <a href=""
-                    class="lg:my-12 lg:flex lg:items-center lg:gap-1">
-                    <svg width="32" height="40" viewBox="0 0 32 40" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0 20C8.83656 20 16 11.0457 16 0C16 11.0457 23.1634 20 32 20C23.1634 20 16 28.9543 16 40C16 28.9543 8.83656 20 0 20Z"
-                            fill="#282828"></path>
-                    </svg>
-                    <span class="lg:text-slate-950 lg:font-bold lg:text-2xl">Create Your Account </span>
-                </a>
-
-                <div class="lg:mx-auto">
-                    <form class="lg:grid lg:space-y-6">
-                        <label class="lg:text-slate-500 lg:pb-2">First Name</label>
-                        <input type="fname" required
-                            class="lg:h-10 lg:rounded-md lg:px-3 lg:py-6 lg:border lg:text-sm lg:focus:outline-none lg:text-violet-600"
-                            style="margin: 0; border: 1px solid #D5D5D5;" placeholder="First Name"
-                            onchange="handleFname(event)">
-                        <label class="lg:text-slate-500 lg:pb-2">Last Name</label>
-                        <input type="sname" required
-                            class="lg:h-10 lg:rounded-md lg:px-3 lg:py-6 lg:border lg:text-sm lg:text-violet-600 lg:focus:outline-none"
-                            style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Last Name"
-                            onchange="handleLname(event)">
-                        <label class="lg:text-slate-500 lg:pb-2">Email</label>
-                        <input type="email" required
-                            class="lg:h-10 lg:rounded-md lg:px-3 lg:py-6 lg:border lg:text-sm lg:text-violet-600 lg:focus:outline-none"
-                            style="margin: 0; border: 1px solid #D5D5D5;" placeholder="123@gmail.com"
-                            onchange="handleEmail(event)">
-                        <label class="lg:text-slate-500 lg:pb-2">Password</label>
-                        <input type="password" required
-                            class="lg:h-10 lg:rounded-md lg:px-3 lg:py-6 lg:border lg:text-sm lg:text-violet-600 lg:focus:outline-none"
-                            style="margin: 0; border: 1px solid #D5D5D5;" placeholder="password"
-                            onchange="handlePassword(event)">
-                        <label class="lg:text-slate-500 lg:pb-2">Company Name</label>
-                        <input type="text" required
-                            class="lg:h-10 lg:rounded-md lg:px-3 lg:py-6 lg:border lg:text-sm lg:text-violet-600 lg:focus:outline-none"
-                            style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Company Name"
-                            onchange="handleCompany(event)">
-                        <label class="lg:text-slate-500 lg:pb-2">Company Domain</label>
-                        <input type="text" required
-                            class="lg:h-10 lg:rounded-md lg:px-3 lg:py-6 lg:border lg:text-sm lg:text-violet-600 lg:focus:outline-none"
-                            style="margin: 0; border: 1px solid #D5D5D5;" placeholder="Company Domain"
-                            onchange="handleCountrydomain(event)">
-                        <label class="lg:text-slate-500 lg:pt-2" style="margin-bottom: -15px;"> Contact Number </label>
-                        <div
-                            style="display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <select
-                                class="lg:h-10 lg:rounded-md lg:px-3 lg:py-2 lg:border lg:text-sm lg:text-violet-600 lg:focus:outline-none bg-white"
-                                style="margin: 0; border: none; box-shadow: none;" onchange="handleIsdc(event)">
-                                <option value="" selected="selected">Select Country Code</option>
-                                <option value="+1">+1 USA</option>
-                                <option value="+91">+91 India</option>
-                                <option value="+44">+44 UK</option>
-                            </select>
-                            <input type="text" required
-                                class="lg:h-10 lg:rounded-md lg:px-3 lg:py-2 lg:border lg:text-sm lg:text-violet-600 lg:focus:outline-none"
-                                style="margin: 0; border: none; box-shadow: none;" placeholder="Phone Number"
-                                onchange="handleContact(event)">
-                        </div>
-                        <label class="lg:text-slate-500 lg:pt-2" style="margin-bottom: -15px;"> Country </label>
-                        <select
-                            class="lg:h-10 lg:rounded-md lg:px-3 lg:py-6 lg:border lg:text-sm lg:text-violet-600 lg:focus:outline-none"
-                            style="margin: 0; border: 1px solid #D5D5D5;" onchange="handleCountry(event)">
-                            <option value="" selected="selected">Select Country</option>
-                            <option value="USA">USA</option>
-                            <option value="India">India</option>
-                            <option value="UK">UK</option>
-                        </select>
-
-                        <div class="flex justify-center">
-                            <button
-                                class="h-11 w-1/2 lg:flex lg:justify-center lg:items-center lg:font-medium lg:bg-white lg:text-slate-900 lg:hover:bg-gray-100 lg:text-base lg:rounded-md lg:my-4"
-                                style="color: #003C79;">
-                                Submit
-                            </button>
-                        </div>
-                        <div class="text-center text-slate-500 text-sm">Already have an account?
-                            <a href="/login.html" class="text-violet-600 hover:underline">Login</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
+    
 
 </div>
 
 <script>
-    // Function to generate options for a select element
-    function populateSelectOptions(selectElement, options) {
-            if (!selectElement) {
-                console.error('Select element is null.');
-                return;
-            }
-            options.forEach(option => {
-                let optionElement = document.createElement('option');
-                optionElement.value = option.value;
-                optionElement.textContent = option.text;
-                selectElement.appendChild(optionElement);
-                console.log('Appended option:', optionElement);
-            });
-        }
+   
 
-    // Function to populate the country code select element
-    function populateCountryCodeSelect() {
-        const countryCodeSelect = document.getElementById('countryCode');
-        if (!countryCodeSelect) {
-                console.error('Element with ID countryCode not found.');
-                return;
-            }
-        const countryCodes = [
-    { value: "+93", label: " +93 " },
+//  populate select options
+function populateSelectOptions(selectElement, options) {
+    if (!selectElement) {
+        console.error('Select element is null.');
+        return;
+    }
+    options.forEach(option => {
+        let optionElement = document.createElement('option');
+        optionElement.value = option.value;
+        optionElement.textContent = option.label; 
+        selectElement.appendChild(optionElement);
+    });
+}
+
+//country code 
+function populateCountryCodeSelect() {
+    const countryCodeSelect = document.getElementById('countryCodeSelect');   
+    if (!countryCodeSelect) {
+        console.error('Element with ID countryCode not found.');
+        return;
+    }
+    const countryCodes = [
+{ value: "+93", label: " +93 " },
   { value: "+355", label: " +355 " },
   { value: "+213", label: " +213 " },
   { value: "+1-684", label: " +1-684 " },
@@ -538,19 +403,20 @@
   { value: "+967", label: " +967 " },
   { value: "+260", label: " +260 " },
   { value: "+263", label: " +263 " },
-        ];
-        populateSelectOptions(countryCodeSelect, countryCodes);
-    }
+        // Add more country codes as needed
+    ];
+    populateSelectOptions(countryCodeSelect, countryCodes);
+}
 
-    // Function to populate the country select element
-    function populateCountrySelect() {
-        const countrySelect = document.getElementById('countrySelect');
-        if (!countrySelect) {
-                console.error('Element with ID countrySelect not found.');
-                return;
-        }
-        const countries = [
-        { value: "Afghanistan", label: "Afghanistan" },
+// country 
+function populateCountrySelect() {
+    const countrySelect = document.getElementById('countrySelect');
+    if (!countrySelect) {
+        console.error('Element with ID countrySelect not found.');
+        return;
+    }
+    const countries = [
+{ value: "Afghanistan", label: "Afghanistan" },
   { value: "Albania", label: "Albania" },
   { value: "Algeria", label: "Algeria" },
   { value: "Andorra", label: "Andorra" },
@@ -753,43 +619,127 @@
   { value: "Yemen", label: "Yemen" },
   { value: "Zambia", label: "Zambia" },
   { value: "Zimbabwe", label: "Zimbabwe" },
-        ];
-        populateSelectOptions(countrySelect, countries);
-    }
+        // Add more countries as needed
+    ];
+    populateSelectOptions(countrySelect, countries);
+}
 
-    // Function to populate the business type select element
-    function populateBusinessSelect() {
+//Business
+function populateBusinessSelect() {
         const businessSelect = document.getElementById('businessSelect');
         if (!businessSelect) {
                 console.error('Element with ID businessSelect not found.');
                 return;
             }
         const businesses = [
-            { value: 'retail', text: 'Retail' },
-            { value: 'manufacturing', text: 'Manufacturing' },
-            { value: 'technology', text: 'Technology' },
-            { value: 'services', text: 'Services' },
-            { value: 'healthcare', text: 'Healthcare' },
-            { value: 'finance', text: 'Finance' },
-            { value: 'education', text: 'Education' },
-            { value: 'construction', text: 'Construction' },
-            { value: 'hospitality', text: 'Hospitality' },
-            { value: 'other', text: 'Other' }
+            { value: 'retail', label: 'Retail' },
+            { value: 'manufacturing', label: 'Manufacturing' },
+            { value: 'technology', label: 'Technology' },
+            { value: 'services', label: 'Services' },
+            { value: 'healthcare', label: 'Healthcare' },
+            { value: 'finance', label: 'Finance' },
+            { value: 'education', label: 'Education' },
+            { value: 'construction', label: 'Construction' },
+            { value: 'hospitality', label: 'Hospitality' },
+            { value: 'other', label: 'Other' }
         ];
         populateSelectOptions(businessSelect, businesses);
     }
 
-    // Call functions to populate the selects
+// Call the populate functions when the document is ready
+document.addEventListener('DOMContentLoaded', function() {
     populateCountryCodeSelect();
     populateCountrySelect();
     populateBusinessSelect();
+    // Add other populate functions here if needed
+});
+   
+   
+document.getElementById('countrySelect').addEventListener('change', function() {
+    document.getElementById('countryInput').value = this.value;
+});
 
-    document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM fully loaded and parsed');
-            populateCountryCodeSelect();
-            populateCountrySelect();
-            populateBusinessSelect();
-        });
+document.getElementById('businessSelect').addEventListener('change', function() {
+    document.getElementById('businessInput').value = this.value;
+});
+
+// document.getElementById('myForm').addEventListener('submit', function (event) {
+//     event.preventDefault(); // Prevent form from submitting
+
+//     const formValues = {
+//         username: document.getElementById('fnameInput').value,
+//         lastName: document.getElementById('snameInput').value,
+//         email: document.getElementById('emailInput').value,
+//         password: document.getElementById('passwordInput').value,
+//         role: document.getElementById('roleInput').value,
+//         companyName: document.getElementById('companyInput').value,
+//         companyDomain: document.getElementById('domainInput').value,
+//         countryCode: document.getElementById('countryCodeSelect').value,
+//         contactNo: document.getElementById('phoneInput').value,
+//         country: document.getElementById('countrySelect').value,
+//         business: document.getElementById('businessSelect').value,
+//         createdDate: new Date().toISOString() 
+//     };
+
+//     console.log('Form Values:', formValues);
+
+//     fetch('https://stratagem.igniculuss.com/api/Users', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(formValues)
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log('Success:', data);
+//     })
+//     .catch((error) => {
+//         console.error('Error:', error);
+//     });
+// });
+
+document.getElementById('myForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form from submitting
+
+    const predefinedValues = {
+        userId: 0,
+        userName: document.getElementById('fnameInput').value,
+        tenantId: 0,
+        tenant: {
+            tenantId: 0,
+            name: "TestCompany",
+            host: "stratagem.igniculuss.com",
+            connectionString: "Server=HKIERPSRVR;Database=TestCompany;User ID=dbadmin; Password=Q~\\5Xf9{Rh*i2Vepcx6y?-3J;TrustServerCertificate=True"
+        },
+        password: "17April@123",
+        email: document.getElementById('emailInput').value,
+        contactNo: document.getElementById('phoneInput').value,
+        country: "India",
+        role: "Admin",
+        createdDate: "2024-06-24T13:31:39.884Z",
+        deletedDate: "2024-06-24T13:31:39.884Z"
+    };
+
+    console.log('Predefined Values:', predefinedValues);
+
+    fetch('https://stratagem.igniculuss.com/api/Users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(predefinedValues)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+});
+
+
 </script>
 </body>
 

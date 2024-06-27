@@ -8,11 +8,36 @@
     <link rel="stylesheet" href="path/to/your/charts.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        .flag {
+            position: relative;
+            display: inline-block;
+            background-color: #EF4444; /* Tailwind red-500 */
+            color: white;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            height: 20px; /* Explicit height */
+            width: 65px; /* Explicit width */
+
+        }
+        .flag::after {
+            content: '';
+            position: absolute;
+            right: -1px;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 12px solid #ffff; 
+        }
+    </style>
+
 </head>
 <body>
-    <div class="flex  ">
-      <div class="bg-cyan-500  text-white w-64 flex flex-col justify-between items-center h-full-screen">
+    <div class="flex">
+       <div class="bg-cyan-500  text-white w-64 flex flex-col justify-between items-center h-full-screen">
         <div class="flexx flex-col justify-center items-center">
            <div class="pt-[3rem] ml-[2.4rem]">
             <Image
@@ -202,6 +227,7 @@
 
 
 
+
         <div class="flex-1 bg-gray-200">
           <div class="bg-white p-4 shadow-sm">
             <div class="flex justify-between items-center">
@@ -262,333 +288,574 @@
             </div>
           </div>
 
-          <div class="p-4 flex justify-between items-center">
-            <div class="flex items-center">
-              <h2 class="text-2xl font-bold mr-2">Shubham Rajput</h2>
-              <img src="/images/hand.png" alt="Hand" class="w-7 h-7" />
-            </div>
-            <div class="flex justify-between items-center px-4 py-2  space-x-1">
-
-
-              <div class="relative inline-block text-left">
-                <div>
-                  <button type="button" class="inline-flex w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 " id="menu-button" aria-expanded="false" aria-haspopup="true">
-                    Till Date
-                    <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                      <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                    </svg>
-                  </button>
-                </div>
-            
-                <!-- Dropdown menu -->
-                <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                  <div class="py-1" role="none">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
-                    <form method="POST" action="#" role="none">
-                      <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="relative inline-block text-left">
-                <div>
-                  <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
-                    Shubham rajput
-                    <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                      <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                    </svg>
-                  </button>
-                </div>
-            
-                <!-- Dropdown menu -->
-                <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                  <div class="py-1" role="none">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
-                    <form method="POST" action="#" role="none">
-                      <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="relative inline-block text-left">
-                <div class="">
-                  <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300  bg-blue-500 hover:bg-gray-50 hover:text-black h-9 " id="menu-button" aria-expanded="false" aria-haspopup="true">
-                    <i class="fa-solid fa-plus text-white"></i>
-                  </button>
-                </div>
-            
-                <!-- Dropdown menu -->
-                <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                  <div class="py-1" role="none">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
-                    <form method="POST" action="#" role="none">
-                      <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            
-            </div>
-
-
-          </div>
-
-          <div class="flex">
-            <div class="w-1/2 bg-white m-4 rounded-lg mb-4">
-              <div class="flex justify-between items-center px-4 py-2 border-b-2 border-slate-300">
-                <div>
-                  <div  class="font-bold">Leads By Source Campaign</div  >
-                </div>
+          <div class="p-4 flex justify-between items-center bg-white mt-3 h-14">
+            <div class="flex justify-center items-center">
+                <div class="flex justify-between items-center px-4 py-2 ">
                 <div class="relative inline-block text-left">
-                  <div>
+                    <div>
                     <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
-                      Till Date
-                      <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                        All Leads
+                        <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                         <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                      </svg>
+                        </svg>
                     </button>
+                    </div>
+                
+                    <!-- Dropdown menu -->
+                    <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div class="py-1" role="none">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                        <form method="POST" action="#" role="none">
+                        <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <button type="button" class="inline-flex w-32 h-9 justify-center gap-x-1.5 rounded-3xl bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 ">
+                    <input type="search" placeholder=" 🔍 Search" class=" rounded-xl w-28 ">
+                </button>
+
+                <!-- <button class="">
+                    <input type="search" placeholder=" 🔍 Search" class="w-28 h-8 rounded-xl ">
+                </button> -->
+            </div>
+
+            <div class="flex justify-end items-center -space-x-4 ">
+                <div class="flex justify-between items-center px-4 py-2 ">
+                    <div class="relative inline-block text-left">
+                    <div>
+                        <button type="button" class="inline-flex w-full justify-center items-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                            <i class="fa-solid fa-bars"></i>
+                        <svg class="-mr-1  h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>
+                        </button>
+                    </div>
+                
+                    <!-- Dropdown menu -->
+                    <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="py-1" role="none">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                        <form method="POST" action="#" role="none">
+                            <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                        </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center px-4 py-2 ">
+                    <div class="relative inline-block text-left">
+                    <div class="flex justify-center items-center">
+                        <button type="button" class="inline-flex w-full justify-center gap-x-1.5  rounded-md bg-[#4880ff] text-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 "  id="menu-button" aria-expanded="false" aria-haspopup="true">
+                            Create Contacts 
+                            <svg class="-mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                            </svg></button>
+                       
+                    </div>
+                
+                    <!-- Dropdown menu -->
+                    <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="py-1" role="none">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                        <form method="POST" action="#" role="none">
+                            <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                        </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center px-4 py-2 ">
+                    <div class="relative inline-block text-left">
+                    <div>
+                        <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#dadcf6] px-3 py-2 text-sm font-semibold text-[#4880ff] shadow-sm ring-1 ring-inset ring-[#4880ff] hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                        Actions
+                        <svg class="-mr-1 h-5 w-5 text-[#4880ff]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>
+                        </button>
+                    </div>
+                
+                    <!-- Dropdown menu -->
+                    <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="py-1" role="none">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                        <form method="POST" action="#" role="none">
+                            <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                        </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+<!-- next div -->
+
+        <div class="p-3">
+            <!-- 1 st div -->
+            <div class="flex justify-between items-center">
+                <div class="flex justify-center items-center mb-1">
+                    <h1 class="font-bold text-3xl ml-2">Leads</h1>&emsp;
+                    <button class="bg-blue-500 text-white py-2 rounded-md w-10 ">72</button>
+                </div>
+                <div class="flex justify-center items-center">
+                    <button type="button" class="inline-flex w-16 h-9 justify-center gap-x-1.5 rounded-l-md bg-white px-3 py-2 text-sm font-semibold      text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 flex justify-center items-center" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                        <i class="fa-solid fa-filter fa-xl"></i>
+                    </button>
+                    
+                        <button type="button" class="inline-flex w-24 h-9 justify-center gap-x-1.5 bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 flex justify-center items-center" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                            Filter By
+                            </button>
+                    <div class="flex justify-between items-center  py-2 ">
+                        <div class="relative inline-block text-left">
+                        <div>
+                            <button type="button" class="inline-flex w-40 justify-center gap-x-1.5 rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                            14 Feb 2019
+                            <svg class="-mr-1 h-5 w-5 text-[#00000]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                            </svg>
+                            </button>
+                        </div>
+                    
+                        <!-- Dropdown menu -->
+                        <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                            <div class="py-1" role="none">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                            <form method="POST" action="#" role="none">
+                                <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                            </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 st div -->
+
+            <!-- Row - 1 -->
+            <div class="flex  justify-start items-center gap-x-5 mb-5">
+              <div class="bg-white w-[26rem] rounded-xl text-[15px]">
+                <div class="flex justify-between items-start p-2">
+                    <div class="flex space-x-2">
+                        <img src="/images/Group 381.png" alt="" class="w-10">
+                        <div>
+                            <h3 class="font-bold">Kris Marrier (Sample)</h3>
+                            <div class="flex justify-start items-center gap-x-2">
+                                <i class="fa-solid fa-cake-candles"></i>
+                                <div class="text-xs font-bold flag flex justify-start items-center"><p class="-ml-2 ">Dec 18</p> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end items-end shadow-2xl ring-1 ring-white rounded-full">
+                        <i class="fa-solid fa-pencil text-sm"></i>
+                    </div>
+                </div>
+                <div class="p-2 flex flex-col gap-1">
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                        <p class="w-32"><i class="fa-solid fa-envelope text-xl"></i></p>
+                        <p class="font-bold">Christopher-maclead@noemail.com</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                        <p class="w-32"><i class="fa-solid fa-phone text-xl"></i></p>
+                        <p class="font-bold">555-555-5555</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                        <p class="w-32"><i class="fa-brands fa-twitter text-xl"></i></p>
+                        <p class="font-bold">Krismarrier_sample</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                        <p class="w-32">Title</p>
+                        <p class="font-bold">Quality Engineer</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                        <p class="w-32">Lead Source</p>
+                        <p class="font-bold">Trade Show</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                        <p class="w-32">Department</p>
+                        <p class="font-bold">Engineering</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white w-[26rem] rounded-xl text-[15px]">
+                <div class="flex justify-between items-start p-2">
+                    <div class="flex space-x-2">
+                        <img src="/images/Group 381.png" alt="" class="w-10">
+                        <div>
+                            <h3 class="font-bold">Kris Marrier (Sample)</h3>
+                            <div class="flex justify-start items-center gap-x-2">
+                                <i class="fa-solid fa-cake-candles"></i>
+                                <div class="text-xs font-bold flag flex justify-start items-center"><p class="-ml-2 ">Dec 18</p> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end items-end shadow-2xl ring-1 ring-white rounded-full">
+                        <i class="fa-solid fa-pencil text-sm"></i>
+                    </div>
+                </div>
+                <div class="p-2 flex flex-col gap-1">
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                        <p class="w-32"><i class="fa-solid fa-envelope text-xl"></i></p>
+                        <p class="font-bold">Christopher-maclead@noemail.com</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                        <p class="w-32"><i class="fa-solid fa-phone text-xl"></i></p>
+                        <p class="font-bold">555-555-5555</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                        <p class="w-32"><i class="fa-brands fa-twitter text-xl"></i></p>
+                        <p class="font-bold">Krismarrier_sample</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                        <p class="w-32">Title</p>
+                        <p class="font-bold">Quality Engineer</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                        <p class="w-32">Lead Source</p>
+                        <p class="font-bold">Trade Show</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                        <p class="w-32">Department</p>
+                        <p class="font-bold">Engineering</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white w-[26rem] rounded-xl text-[15px]">
+                <div class="flex justify-between items-start p-2">
+                    <div class="flex space-x-2">
+                        <img src="/images/Group 381.png" alt="" class="w-10">
+                        <div>
+                            <h3 class="font-bold">Kris Marrier (Sample)</h3>
+                            <div class="flex justify-start items-center gap-x-2">
+                                <i class="fa-solid fa-cake-candles"></i>
+                                <div class="text-xs font-bold flag flex justify-start items-center"><p class="-ml-2 ">Dec 18</p> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end items-end shadow-2xl ring-1 ring-white rounded-full">
+                        <i class="fa-solid fa-pencil text-sm"></i>
+                    </div>
+                </div>
+                <div class="p-2 flex flex-col gap-1">
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                        <p class="w-32"><i class="fa-solid fa-envelope text-xl"></i></p>
+                        <p class="font-bold">Christopher-maclead@noemail.com</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                        <p class="w-32"><i class="fa-solid fa-phone text-xl"></i></p>
+                        <p class="font-bold">555-555-5555</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                        <p class="w-32"><i class="fa-brands fa-twitter text-xl"></i></p>
+                        <p class="font-bold">Krismarrier_sample</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                        <p class="w-32">Title</p>
+                        <p class="font-bold">Quality Engineer</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                        <p class="w-32">Lead Source</p>
+                        <p class="font-bold">Trade Show</p>
+                    </div>
+                    <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                        <p class="w-32">Department</p>
+                        <p class="font-bold">Engineering</p>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+
+                  <!-- Row - 2 -->
+                  <div class="flex  justify-start items-center gap-x-5 mb-5">
+                    <div class="bg-white w-[26rem] rounded-xl text-[15px]">
+                      <div class="flex justify-between items-start p-2">
+                          <div class="flex space-x-2">
+                              <img src="/images/Group 381.png" alt="" class="w-10">
+                              <div>
+                                  <h3 class="font-bold">Kris Marrier (Sample)</h3>
+                                  <div class="flex justify-start items-center gap-x-2">
+                                      <i class="fa-solid fa-cake-candles"></i>
+                                      <div class="text-xs font-bold flag flex justify-start items-center"><p class="-ml-2 ">Dec 18</p> </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="flex justify-end items-end shadow-2xl ring-1 ring-white rounded-full">
+                              <i class="fa-solid fa-pencil text-sm"></i>
+                          </div>
+                      </div>
+                      <div class="p-2 flex flex-col gap-1">
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                              <p class="w-32"><i class="fa-solid fa-envelope text-xl"></i></p>
+                              <p class="font-bold">Christopher-maclead@noemail.com</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                              <p class="w-32"><i class="fa-solid fa-phone text-xl"></i></p>
+                              <p class="font-bold">555-555-5555</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                              <p class="w-32"><i class="fa-brands fa-twitter text-xl"></i></p>
+                              <p class="font-bold">Krismarrier_sample</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                              <p class="w-32">Title</p>
+                              <p class="font-bold">Quality Engineer</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                              <p class="w-32">Lead Source</p>
+                              <p class="font-bold">Trade Show</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                              <p class="w-32">Department</p>
+                              <p class="font-bold">Engineering</p>
+                          </div>
+                      </div>
                   </div>
+                  
+                  <div class="bg-white w-[26rem] rounded-xl text-[15px]">
+                      <div class="flex justify-between items-start p-2">
+                          <div class="flex space-x-2">
+                              <img src="/images/Group 381.png" alt="" class="w-10">
+                              <div>
+                                  <h3 class="font-bold">Kris Marrier (Sample)</h3>
+                                  <div class="flex justify-start items-center gap-x-2">
+                                      <i class="fa-solid fa-cake-candles"></i>
+                                      <div class="text-xs font-bold flag flex justify-start items-center"><p class="-ml-2 ">Dec 18</p> </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="flex justify-end items-end shadow-2xl ring-1 ring-white rounded-full">
+                              <i class="fa-solid fa-pencil text-sm"></i>
+                          </div>
+                      </div>
+                      <div class="p-2 flex flex-col gap-1">
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                              <p class="w-32"><i class="fa-solid fa-envelope text-xl"></i></p>
+                              <p class="font-bold">Christopher-maclead@noemail.com</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                              <p class="w-32"><i class="fa-solid fa-phone text-xl"></i></p>
+                              <p class="font-bold">555-555-5555</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                              <p class="w-32"><i class="fa-brands fa-twitter text-xl"></i></p>
+                              <p class="font-bold">Krismarrier_sample</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                              <p class="w-32">Title</p>
+                              <p class="font-bold">Quality Engineer</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                              <p class="w-32">Lead Source</p>
+                              <p class="font-bold">Trade Show</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                              <p class="w-32">Department</p>
+                              <p class="font-bold">Engineering</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="bg-white w-[26rem] rounded-xl text-[15px]">
+                      <div class="flex justify-between items-start p-2">
+                          <div class="flex space-x-2">
+                              <img src="/images/Group 381.png" alt="" class="w-10">
+                              <div>
+                                  <h3 class="font-bold">Kris Marrier (Sample)</h3>
+                                  <div class="flex justify-start items-center gap-x-2">
+                                      <i class="fa-solid fa-cake-candles"></i>
+                                      <div class="text-xs font-bold flag flex justify-start items-center"><p class="-ml-2 ">Dec 18</p> </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="flex justify-end items-end shadow-2xl ring-1 ring-white rounded-full">
+                              <i class="fa-solid fa-pencil text-sm"></i>
+                          </div>
+                      </div>
+                      <div class="p-2 flex flex-col gap-1">
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                              <p class="w-32"><i class="fa-solid fa-envelope text-xl"></i></p>
+                              <p class="font-bold">Christopher-maclead@noemail.com</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                              <p class="w-32"><i class="fa-solid fa-phone text-xl"></i></p>
+                              <p class="font-bold">555-555-5555</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                              <p class="w-32"><i class="fa-brands fa-twitter text-xl"></i></p>
+                              <p class="font-bold">Krismarrier_sample</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                              <p class="w-32">Title</p>
+                              <p class="font-bold">Quality Engineer</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                              <p class="w-32">Lead Source</p>
+                              <p class="font-bold">Trade Show</p>
+                          </div>
+                          <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                              <p class="w-32">Department</p>
+                              <p class="font-bold">Engineering</p>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+
+            
+                        <!-- Row - 3 -->
+                        <div class="flex  justify-start items-center gap-x-5 mb-5">
+                            <div class="bg-white w-[26rem] rounded-xl text-[15px]">
+                              <div class="flex justify-between items-start p-2">
+                                  <div class="flex space-x-2">
+                                      <img src="/images/Group 381.png" alt="" class="w-10">
+                                      <div>
+                                          <h3 class="font-bold">Kris Marrier (Sample)</h3>
+                                          <div class="flex justify-start items-center gap-x-2">
+                                              <i class="fa-solid fa-cake-candles"></i>
+                                              <div class="text-xs font-bold flag flex justify-start items-center"><p class="-ml-2 ">Dec 18</p> </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="flex justify-end items-end shadow-2xl ring-1 ring-white rounded-full">
+                                      <i class="fa-solid fa-pencil text-sm"></i>
+                                  </div>
+                              </div>
+                              <div class="p-2 flex flex-col gap-1">
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                                      <p class="w-32"><i class="fa-solid fa-envelope text-xl"></i></p>
+                                      <p class="font-bold">Christopher-maclead@noemail.com</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                                      <p class="w-32"><i class="fa-solid fa-phone text-xl"></i></p>
+                                      <p class="font-bold">555-555-5555</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                                      <p class="w-32"><i class="fa-brands fa-twitter text-xl"></i></p>
+                                      <p class="font-bold">Krismarrier_sample</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                                      <p class="w-32">Title</p>
+                                      <p class="font-bold">Quality Engineer</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                                      <p class="w-32">Lead Source</p>
+                                      <p class="font-bold">Trade Show</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                                      <p class="w-32">Department</p>
+                                      <p class="font-bold">Engineering</p>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                          <div class="bg-white w-[26rem] rounded-xl text-[15px]">
+                              <div class="flex justify-between items-start p-2">
+                                  <div class="flex space-x-2">
+                                      <img src="/images/Group 381.png" alt="" class="w-10">
+                                      <div>
+                                          <h3 class="font-bold">Kris Marrier (Sample)</h3>
+                                          <div class="flex justify-start items-center gap-x-2">
+                                              <i class="fa-solid fa-cake-candles"></i>
+                                              <div class="text-xs font-bold flag flex justify-start items-center"><p class="-ml-2 ">Dec 18</p> </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="flex justify-end items-end shadow-2xl ring-1 ring-white rounded-full">
+                                      <i class="fa-solid fa-pencil text-sm"></i>
+                                  </div>
+                              </div>
+                              <div class="p-2 flex flex-col gap-1">
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                                      <p class="w-32"><i class="fa-solid fa-envelope text-xl"></i></p>
+                                      <p class="font-bold">Christopher-maclead@noemail.com</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                                      <p class="w-32"><i class="fa-solid fa-phone text-xl"></i></p>
+                                      <p class="font-bold">555-555-5555</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                                      <p class="w-32"><i class="fa-brands fa-twitter text-xl"></i></p>
+                                      <p class="font-bold">Krismarrier_sample</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                                      <p class="w-32">Title</p>
+                                      <p class="font-bold">Quality Engineer</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                                      <p class="w-32">Lead Source</p>
+                                      <p class="font-bold">Trade Show</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                                      <p class="w-32">Department</p>
+                                      <p class="font-bold">Engineering</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="bg-white w-[26rem] rounded-xl text-[15px]">
+                              <div class="flex justify-between items-start p-2">
+                                  <div class="flex space-x-2">
+                                      <img src="/images/Group 381.png" alt="" class="w-10">
+                                      <div>
+                                          <h3 class="font-bold">Kris Marrier (Sample)</h3>
+                                          <div class="flex justify-start items-center gap-x-2">
+                                              <i class="fa-solid fa-cake-candles"></i>
+                                              <div class="text-xs font-bold flag flex justify-start items-center"><p class="-ml-2 ">Dec 18</p> </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="flex justify-end items-end shadow-2xl ring-1 ring-white rounded-full">
+                                      <i class="fa-solid fa-pencil text-sm"></i>
+                                  </div>
+                              </div>
+                              <div class="p-2 flex flex-col gap-1">
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                                      <p class="w-32"><i class="fa-solid fa-envelope text-xl"></i></p>
+                                      <p class="font-bold">Christopher-maclead@noemail.com</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                                      <p class="w-32"><i class="fa-solid fa-phone text-xl"></i></p>
+                                      <p class="font-bold">555-555-5555</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg text-blue-500 border border-black-500">
+                                      <p class="w-32"><i class="fa-brands fa-twitter text-xl"></i></p>
+                                      <p class="font-bold">Krismarrier_sample</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                                      <p class="w-32">Title</p>
+                                      <p class="font-bold">Quality Engineer</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                                      <p class="w-32">Lead Source</p>
+                                      <p class="font-bold">Trade Show</p>
+                                  </div>
+                                  <div class="bg-gray-100 flex justify-start items-center p-2 rounded-lg border border-black-500">
+                                      <p class="w-32">Department</p>
+                                      <p class="font-bold">Engineering</p>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
               
-                  <!-- Dropdown menu -->
-                  <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                    <div class="py-1" role="none">
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
-                      <form method="POST" action="#" role="none">
-                        <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div id="chart_div" style="width: full; height: 350px" ></div>
-
-            </div>
-            <div class="w-1/2 bg-white m-4 rounded-lg">
-              <div class="flex justify-between items-center px-4 py-2 border-b-2 border-slate-300">
-                <div>
-                  <div  class="font-bold">Cases By Priority (Per Owner)</div>
-                </div>
-              <div class="relative inline-block text-left">
-                <div>
-                  <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
-                    Till Date
-                    <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                      <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                    </svg>
-                  </button>
-                </div>
-
-                <!-- Dropdown menu -->
-                <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                  <div class="py-1" role="none">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
-                    <form method="POST" action="#" role="none">
-                      <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              </div>
-              <div class="flex justify-between items-center px-4 py-2  ">
-                <div>
-                  <div  class="p-4">Active Cases</div>
-                </div>
-
-                <div class="flex">
-                  <div class="mr-2">
-                    <svg class="w-6 h-4" viewBox="0 0 24 14" fill="#EF1763" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="14" rx="7" />
-                    </svg>
-                  </div>
-                  <div class="mr-4">
-                    <div  class="text-sm mb-2">Low</div>
-                  </div>
-                  <div class="mr-2">
-                    <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="14" rx="7" fill="#F18F1C" />
-                    </svg>
-
-                  </div>
-                  <div class="mr-4">
-                    <div  class="text-sm mb-2">Normal</div>
-                  </div>
-                  <div class="mr-2">
-                    <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="24" height="14" rx="7" fill="#31A4FF" />
-                    </svg>
-
-
-                  </div>
-                  <div class="mr-4">
-                    <div  class="text-sm mb-2">High</div>
-                  </div>
-                </div>
-
-              </div>
-
-
-              <div id="chart_div2" style="height: 350px; width: auto;" class="mb-2"></div>
-
-            </div>
-          </div>
-
-
-
-          <div class="bg-white m-4 rounded-2xl h-[26.4rem]">
-            <div class="flex justify-between p-4">
-              <div>
-                <button class="bg-gray-200 text-gray-500 px-4 py-2 rounded hover:text-white hover:bg-cyan-400">My Open task</button>
-                <button class="bg-gray-200 text-gray-500 px-4 py-2 rounded hover:text-white hover:bg-cyan-400">My meetings</button>
-                <button class="bg-gray-200 text-gray-500 px-4 py-2 rounded hover:text-white hover:bg-cyan-400">Today's leads</button>
-                <button class="bg-gray-200 text-gray-500 px-4 py-2 rounded hover:text-white hover:bg-cyan-400">My Deals closing this month</button>
-              </div>
-              <div>
-                <div class="relative inline-block text-left">
-                  <div>
-                    <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
-                      Igniculuss
-                      <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                      </svg>
-                    </button>
-                  </div>
-          
-                  <!-- Dropdown menu -->
-                  <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                    <div class="py-1" role="none">
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
-                      <form method="POST" action="#" role="none">
-                        <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr style="margin-top: 5px; margin-bottom: 5px;">
-            <div class="overflow-y-scroll h-[20rem] scrollbar scrollbar-thumb-blue-500 scrollbar-track-transparent">
-              <!-- table -->
-              <table class="w-full">
-                <thead>
-                  <tr class=" text-gray-500">
-                    <th class="py-2 px-4 text-left">Subject</th>
-                    <th class="py-2 px-4 text-left">Regarding</th>
-                    <th class="py-2 px-4 text-left">Activity Type</th>
-                    <th class="py-2 px-4 text-left">Activity Status</th>
-                    <th class="py-2 px-4 text-left">Owner</th>
-                    <th class="py-2 px-4 text-left">Priority</th>
-                    <th class="py-2 px-4 text-left">Start Date</th>
-                    <th class="py-2 px-4 text-left">End Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="">
-                    <td class="py-2 px-4">Build Marketing List For Amp.</td>
-                    <td class="py-2 px-4">Software Project</td>
-                    <td class="py-2 px-4"><button class="bg-blue-500 text-white px-4 py-2 rounded-full w-20">Task</button></td>
-                    <td class="py-2 px-4"><button class="bg-green-500 text-white px-4 py-2 rounded-full w-20">Open</button></td>
-                    <td class="py-2 px-4"><div class="flex justify-start gap-1"><img src="/images/hand.png" alt="" class="w-6"><p> Keen Malit</p></div></td>
-                    <td class="py-2 px-4"><button class="bg-orange-400 text-white px-4 py-2 rounded-full w-20 ">Normal</button></td>
-                    <td class="py-2 px-4">12/02/23</td>
-                    <td class="py-2 px-4">12/05/23</td>
-                  </tr>
-                  <tr class="">
-                    <td class="py-2 px-4">Build Marketing List For Amp.</td>
-                    <td class="py-2 px-4">Software Project</td>
-                    <td class="py-2 px-4"><button class="bg-blue-500 text-white px-4 py-2 rounded-full w-20">Task</button></td>
-                    <td class="py-2 px-4"><button class="bg-green-500 text-white px-4 py-2 rounded-full w-20">Open</button></td>
-                    <td class="py-2 px-4"><div class="flex justify-start gap-1"><img src="/images/hand.png" alt="" class="w-6"><p> Keen Malit</p></div></td>
-                    <td class="py-2 px-4"><button class="bg-orange-400 text-white px-4 py-2 rounded-full w-20 ">Normal</button></td>
-                    <td class="py-2 px-4">12/02/23</td>
-                    <td class="py-2 px-4">12/05/23</td>
-                  </tr>
-                  <tr class="">
-                    <td class="py-2 px-4">Build Marketing List For Amp.</td>
-                    <td class="py-2 px-4">Software Project</td>
-                    <td class="py-2 px-4"><button class="bg-blue-500 text-white px-4 py-2 rounded-full w-20">Task</button></td>
-                    <td class="py-2 px-4"><button class="bg-green-500 text-white px-4 py-2 rounded-full w-20">Open</button></td>
-                    <td class="py-2 px-4"><div class="flex justify-start gap-1"><img src="/images/hand.png" alt="" class="w-6"><p> Keen Malit</p></div></td>
-                    <td class="py-2 px-4"><button class="bg-orange-400 text-white px-4 py-2 rounded-full w-20 ">Normal</button></td>
-                    <td class="py-2 px-4">12/02/23</td>
-                    <td class="py-2 px-4">12/05/23</td>
-                  </tr>
-                  <tr class="">
-                    <td class="py-2 px-4">Build Marketing List For Amp.</td>
-                    <td class="py-2 px-4">Software Project</td>
-                    <td class="py-2 px-4"><button class="bg-blue-500 text-white px-4 py-2 rounded-full w-20">Task</button></td>
-                    <td class="py-2 px-4"><button class="bg-green-500 text-white px-4 py-2 rounded-full w-20">Open</button></td>
-                    <td class="py-2 px-4"><div class="flex justify-start gap-1"><img src="/images/hand.png" alt="" class="w-6"><p> Keen Malit</p></div></td>
-                    <td class="py-2 px-4"><button class="bg-orange-400 text-white px-4 py-2 rounded-full w-20 ">Normal</button></td>
-                    <td class="py-2 px-4">12/02/23</td>
-                    <td class="py-2 px-4">12/05/23</td>
-                  </tr>
-                  <tr class="">
-                    <td class="py-2 px-4">Build Marketing List For Amp.</td>
-                    <td class="py-2 px-4">Software Project</td>
-                    <td class="py-2 px-4"><button class="bg-blue-500 text-white px-4 py-2 rounded-full w-20">Task</button></td>
-                    <td class="py-2 px-4"><button class="bg-green-500 text-white px-4 py-2 rounded-full w-20">Open</button></td>
-                    <td class="py-2 px-4"><div class="flex justify-start gap-1"><img src="/images/hand.png" alt="" class="w-6"><p> Keen Malit</p></div></td>
-                    <td class="py-2 px-4"><button class="bg-orange-400 text-white px-4 py-2 rounded-full w-20 ">Normal</button></td>
-                    <td class="py-2 px-4">12/02/23</td>
-                    <td class="py-2 px-4">12/05/23</td>
-                  </tr>
-                  <tr class="">
-                    <td class="py-2 px-4">Build Marketing List For Amp.</td>
-                    <td class="py-2 px-4">Software Project</td>
-                    <td class="py-2 px-4"><button class="bg-blue-500 text-white px-4 py-2 rounded-full w-20">Task</button></td>
-                    <td class="py-2 px-4"><button class="bg-green-500 text-white px-4 py-2 rounded-full w-20">Open</button></td>
-                    <td class="py-2 px-4"><div class="flex justify-start gap-1"><img src="/images/hand.png" alt="" class="w-6"><p> Keen Malit</p></div></td>
-                    <td class="py-2 px-4"><button class="bg-orange-400 text-white px-4 py-2 rounded-full w-20 ">Normal</button></td>
-                    <td class="py-2 px-4">12/02/23</td>
-                    <td class="py-2 px-4">12/05/23</td>
-                  </tr>
-                  <tr class="">
-                    <td class="py-2 px-4">Build Marketing List For Amp.</td>
-                    <td class="py-2 px-4">Software Project</td>
-                    <td class="py-2 px-4"><button class="bg-blue-500 text-white px-4 py-2 rounded-full w-20">Task</button></td>
-                    <td class="py-2 px-4"><button class="bg-green-500 text-white px-4 py-2 rounded-full w-20">Open</button></td>
-                    <td class="py-2 px-4"><div class="flex justify-start gap-1"><img src="/images/hand.png" alt="" class="w-6"><p> Keen Malit</p></div></td>
-                    <td class="py-2 px-4"><button class="bg-orange-400 text-white px-4 py-2 rounded-full w-20 ">Normal</button></td>
-                    <td class="py-2 px-4">12/02/23</td>
-                    <td class="py-2 px-4">12/05/23</td>
-                  </tr>
-                  <tr class="">
-                    <td class="py-2 px-4">Build Marketing List For Amp.</td>
-                    <td class="py-2 px-4">Software Project</td>
-                    <td class="py-2 px-4"><button class="bg-blue-500 text-white px-4 py-2 rounded-full w-20">Task</button></td>
-                    <td class="py-2 px-4"><button class="bg-green-500 text-white px-4 py-2 rounded-full w-20">Open</button></td>
-                    <td class="py-2 px-4"><div class="flex justify-start gap-1"><img src="/images/hand.png" alt="" class="w-6"><p> Keen Malit</p></div></td>
-                    <td class="py-2 px-4"><button class="bg-orange-400 text-white px-4 py-2 rounded-full w-20 ">Normal</button></td>
-                    <td class="py-2 px-4">12/02/23</td>
-                    <td class="py-2 px-4">12/05/23</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          
 
 
 
 
+</div>
 
-        </div>
-      </div> 
+
       <script>
 
        document.getElementById('menu-button').addEventListener('click', function () {
@@ -663,107 +930,6 @@
       
 
 
-      document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('menu-button').addEventListener('click', function (event) {
-        event.stopPropagation(); // Prevent triggering window click event
-        var menu = document.getElementById('dropdown-menu');
-        var isExpanded = menu.classList.contains('hidden');
-        menu.classList.toggle('hidden', !isExpanded);
-        this.setAttribute('aria-expanded', isExpanded);
-    });
-
-    document.getElementById('menu-button').addEventListener('click', function () {
-        var menu = document.getElementById('dropdown-menu');
-        var isExpanded = menu.classList.contains('hidden');
-        menu.classList.toggle('hidden', !isExpanded);
-        this.setAttribute('aria-expanded', isExpanded);
-      });
-  
-      // Close the dropdown if clicked outside
-      window.addEventListener('click', function (e) {
-        var button = document.getElementById('menu-button');
-        var menu = document.getElementById('dropdown-menu');
-        if (!button.contains(e.target) && !menu.contains(e.target)) {
-          menu.classList.add('hidden');
-          button.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-    google.charts.load('current', {packages: ['corechart', 'bar']});
-    google.charts.setOnLoadCallback(drawBasic);
-
-    function drawBasic() {
-        var data = google.visualization.arrayToDataTable([
-            ['City', 'Count All(Name)'],
-            ['New 3D Printing...', 40],
-            ['Direct Leads.', 20],
-            ['Customer Retention', 30],
-            ['Customer Marketing', 35],
-            ['3D Printers Promo', 25]
-        ]);
-
-        var options = {
-            title: 'Open Leads',
-            chartArea: {width: '50%', height: '70%'},
-            hAxis: {
-                title: 'Count All(Name)',
-                minValue: 0,
-                gridlines: {
-                    color: 'transparent'
-                }
-            },
-            vAxis: {
-                title: '',
-                gridlines: {
-                    color: 'red'
-                }
-            },
-            bar: {groupWidth: '45%'},
-            legend: { position: 'none' }
-        };
-
-        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-    }
-
-    google.charts.load('current', {packages: ['corechart', 'bar']});
-    google.charts.setOnLoadCallback(drawStacked);
-
-    function drawStacked() {
-      var data = google.visualization.arrayToDataTable([
-        ['Year', 'High', 'Normal', 'Low'],
-        ['CRM System', 10, 24, 20],
-        ['Jim Hance', 16, 22, 23],
-        ['Jill Frank', 28, 19, 29],
-        ['Loni Penor', 28, 19, 29],
-        ['Mark Harrington', 28, 19, 29]
-      ]);
-
-      var options = {
-        // title: 'Active Cases',
-        // width: 400,
-        // height: 400,
-        legend: 'none',
-        bar: { groupWidth: '45%' },  // Adjust this value to change column width
-        isStacked: true,
-        colors: ['#31A4FF', '#F18F1C', '#EF1763'], // Colors for Low, Normal, High
-        vAxis: {
-          title: 'Year',
-          gridlines: { color: 'transparent' } // This removes the vertical grid lines
-        },
-        hAxis: {
-          title: 'Owner',
-          baselineColor: 'transparent' // This hides the baseline
-        }
-      };
-
-      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
-      chart.draw(data, options);
-    }
-});
-
       </script>
-         
-      
 </body>
 </html>
